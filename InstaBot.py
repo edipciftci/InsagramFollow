@@ -6,6 +6,12 @@ from selenium.webdriver.common.keys import Keys
 USERNAME = input("Enter your username: ")
 PASSWORD = input("Enter your password: ")
 
+def get_followers():
+    pass
+
+def get_following():
+    pass
+
 url = 'https://www.instagram.com/'
 driver ='/usr/bin/chromedriver'
 browser = webdriver.Chrome()
@@ -20,3 +26,6 @@ login = browser.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button')
 username.send_keys(USERNAME)
 password.send_keys(PASSWORD)
 login.click()
+
+browser.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[6]').click()
+browser.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[6]/div[2]/div[2]/div[2]/a[1]').click()
